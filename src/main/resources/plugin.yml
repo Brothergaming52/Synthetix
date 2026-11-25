@@ -1,0 +1,41 @@
+name: Synthetix
+version: '${project.version}'
+main: org.bg52.synthetix.SynthetixPlugin
+api-version: '1.20'
+folia-supported: true
+author: BrotherGaming52
+softdepend: [ResourcePackManager, Nexo, ItemsAdder, Oraxen, CraftEngine]
+description: Ultra-modular Core Engine for Paper 1.20.6+ supporting Custom Items, Data Components, Recipes, Drops, Resource Packs, and Storage.
+
+commands:
+  synth:
+    description: Master command for Synthetix core engine.
+    aliases: [synthetix, synthpack]
+    usage: /synth <item|recipe|drop|pack|storage|gui|reload>
+
+permissions:
+  synthetix.admin:
+    description: Full access to all Synthetix administrative and editor commands.
+    default: op
+  synthetix.recipe:
+    description: Allows players to look up item crafting and cooking recipes via /synth recipe.
+    default: true
+  synthetix.settings:
+    description: Allows access to /synth settings and global feature toggles.
+    default: op
+  synthetix.sets:
+    description: Allows access to /synth sets equipment sets manager.
+    default: op
+  synthetix.export:
+    description: Allows exporting item packages via /synth export.
+    default: op
+  synthetix.import:
+    description: Allows importing item packages via /synth import.
+    default: op
+  synthetix.command.gui:
+    description: Allows opening the in-game item and recipe creation GUIs.
+    default: op
+  synthetix.command.give:
+    description: Allows giving custom Synthetix items.
+    default: op
+

@@ -1,0 +1,52 @@
+# ==============================================================================
+#                 SYNTHETIX DISTRIBUTION CONFIGURATION - TRADES
+# ==============================================================================
+# Configures custom trades for Villagers and Wandering Traders.
+#
+# SETTINGS PER TRADE:
+# - profession: Villager profession ("CLERIC", "WEAPONSMITH", "ARMORER", "LIBRARIAN", etc.)
+#               or "WANDERING_TRADER", or "ANY"
+# - level: Required villager mastery level (1 to 5: Novice, Apprentice, Journeyman, Expert, Master)
+# - cost-1: Primary payment item (item ID or Material) and required count
+# - cost-2: Optional secondary payment item (item ID or Material) and required count
+# - result: Resulting item received by player
+# - max-uses: Maximum times this trade can be used before needing restocking (default 12)
+# - villager-xp: Experience given to the villager when traded (default 10)
+# - price-multiplier: Price increase factor when demand is high (default 0.05)
+# - chance: Probability (0.0 to 1.0) of this trade being unlocked when leveling
+# ==============================================================================
+
+trades:
+  # Example 1: Level 2 (Apprentice) Cleric sells a Ruby for 18 Emeralds + 1 Diamond
+  cleric_ruby_offer:
+    profession: "CLERIC"
+    level: 2
+    cost-1:
+      item: "EMERALD"
+      amount: 18
+    cost-2:
+      item: "DIAMOND"
+      amount: 1
+    result:
+      item: "synth:ruby"
+      amount: 1
+    max-uses: 12
+    villager-xp: 10
+    price-multiplier: 0.05
+    chance: 0.60
+
+  # Example 2: Wandering Trader offering rare custom items
+  wandering_trader_ruby_elixir:
+    profession: "WANDERING_TRADER"
+    level: 1
+    cost-1:
+      item: "EMERALD"
+      amount: 12
+    result:
+      item: "synth:ruby_elixir"
+      amount: 1
+    max-uses: 4
+    villager-xp: 0
+    price-multiplier: 0.0
+    chance: 0.40
+

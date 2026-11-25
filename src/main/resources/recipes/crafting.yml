@@ -1,0 +1,37 @@
+# ==============================================================================
+#                 SYNTHETIX RECIPE CONFIGURATION - CRAFTING
+# ==============================================================================
+# Supports both SHAPED and SHAPELESS crafting table recipes.
+#
+# INGREDIENT FORMATS:
+# - Vanilla Material: "DIAMOND", "IRON_INGOT", "STICK"
+# - Synthetix Custom Item: "synth:ruby_ingot" or "ruby_ingot" (ExactChoice matching)
+# - Vanilla Tag: "tag:minecraft:planks", "tag:minecraft:logs"
+# ==============================================================================
+
+# Example 1: Shaped Recipe
+# Creates 1x ruby_sword from 2x ruby_ingot and 1x stick
+#ruby_sword_recipe:
+#  type: SHAPED
+#  result: "synth:ruby_sword"
+#  amount: 1
+#  shape:
+#    - " R "
+#    - " R "
+#    - " S "
+#  ingredients:
+#    R: "synth:ruby_ingot"
+#    S: "STICK"
+
+# Example 2: Shapeless Recipe
+# Combines 4x ruby_fragment into 1x ruby_ingot in any grid arrangement
+#ruby_ingot_shapeless:
+#  type: SHAPELESS
+#  result: "synth:ruby_ingot"
+#  amount: 1
+#  ingredients:
+#    - "synth:ruby_fragment"
+#    - "synth:ruby_fragment"
+#    - "synth:ruby_fragment"
+#    - "synth:ruby_fragment"
+

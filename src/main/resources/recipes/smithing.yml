@@ -1,0 +1,19 @@
+# ==============================================================================
+#                 SYNTHETIX RECIPE CONFIGURATION - SMITHING TABLE
+# ==============================================================================
+# Allows transforming gear via modern 1.20+ Smithing Table recipes.
+# - template: Smithing template (e.g. NETHERITE_UPGRADE_SMITHING_TEMPLATE or custom item)
+# - base: Base armor or tool (e.g. DIAMOND_CHESTPLATE or custom item)
+# - addition: Upgrade catalyst (e.g. NETHERITE_INGOT or custom item)
+# - result: Upgraded custom armor or tool
+# ==============================================================================
+
+# Example: Upgrading Diamond Helmet to Ruby Helmet via Smithing Table
+#smith_ruby_helmet:
+#  type: SMITHING_TRANSFORM
+#  template: "NETHERITE_UPGRADE_SMITHING_TEMPLATE"
+#  base: "DIAMOND_HELMET"
+#  addition: "synth:ruby_ingot"
+#  result: "synth:ruby_helmet"
+#  amount: 1
+

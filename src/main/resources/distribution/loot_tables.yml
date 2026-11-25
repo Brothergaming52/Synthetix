@@ -1,0 +1,53 @@
+# ==============================================================================
+#              SYNTHETIX DISTRIBUTION CONFIGURATION - LOOT TABLES
+# ==============================================================================
+# Injects custom items into any vanilla or datapack/plugin loot table on the server.
+#
+# SETTINGS PER INJECTION:
+# - item: Synthetix item ID ("synth:ruby") or vanilla material ("DIAMOND")
+# - loot-tables: List of loot table keys or wildcards:
+#     - Specific table: "minecraft:chests/simple_dungeon"
+#     - Wildcard category: "minecraft:chests/*" (all chest loot tables)
+#     - Archaeology: "minecraft:archaeology/*"
+#     - Trial Chambers: "minecraft:chests/trial_chambers/*"
+#     - All loot tables: "*"
+# - chance: Generation chance from 0.0 (0%) to 1.0 (100%) per roll
+# - min-amount: Minimum item stack amount generated
+# - max-amount: Maximum item stack amount generated
+# - rolls: Number of roll attempts per container generation
+# ==============================================================================
+
+injections:
+  # Example 1: Dungeons & Temples have a 30% chance to contain Rubies
+  dungeon_ruby_chest:
+    item: "synth:ruby"
+    loot-tables:
+      - "minecraft:chests/simple_dungeon"
+      - "minecraft:chests/desert_pyramid"
+      - "minecraft:chests/jungle_temple"
+      - "minecraft:chests/abandoned_mineshaft"
+    chance: 0.30
+    min-amount: 1
+    max-amount: 3
+    rolls: 1
+
+  # Example 2: Modern 1.21+ Trial Chambers reward chests
+  trial_chamber_ruby:
+    item: "synth:ruby"
+    loot-tables:
+      - "minecraft:chests/trial_chambers/*"
+    chance: 0.40
+    min-amount: 1
+    max-amount: 2
+    rolls: 2
+
+  # Example 3: Archaeology brushable suspicious sand / gravel
+  archaeology_ruby_fragment:
+    item: "synth:ruby_fragment"
+    loot-tables:
+      - "minecraft:archaeology/*"
+    chance: 0.20
+    min-amount: 1
+    max-amount: 1
+    rolls: 1
+

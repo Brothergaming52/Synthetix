@@ -1,0 +1,24 @@
+{
+  "resource_pack_name": "synthetix",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "synthetix_smithing_template_slot": {
+      "textures": "textures/synthetix/gui/smithing_template_armor_trim"
+    },
+    "synthetix_chestplate_slot": {
+      "textures": "textures/synthetix/gui/chestplate"
+    },
+    "synthetix_ingot_slot": {
+      "textures": "textures/synthetix/gui/ingot"
+    },
+    "synthetix_arrow_icon": {
+      "textures": "textures/synthetix/gui/arrow"
+    },
+    "synthetix_error_icon": {
+      "textures": "textures/synthetix/gui/error"
+    },
+    "synthetix_plus_icon": {
+      "textures": "textures/synthetix/gui/plus"
+    }
+  }
+}

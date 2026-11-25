@@ -1,0 +1,46 @@
+# ==============================================================================
+#                 SYNTHETIX RECIPE CONFIGURATION - COOKING & SMELTING
+# ==============================================================================
+# Supported Types:
+# - FURNACE (Default 200 ticks = 10s)
+# - BLAST_FURNACE (Default 100 ticks = 5s, 2x speed for ores/metals)
+# - SMOKER (Default 100 ticks = 5s, 2x speed for foods)
+# - CAMPFIRE (Default 600 ticks = 30s)
+# ==============================================================================
+
+# Example 1: Smelting Ruby Ore in standard Furnace
+#smelt_ruby_ore:
+#  type: FURNACE
+#  input: "synth:raw_ruby"
+#  result: "synth:ruby_ingot"
+#  amount: 1
+#  cooking-time: 200 # 10 seconds
+#  experience: 1.0
+
+# Example 2: High-speed Blast Furnace smelting
+#blast_ruby_ore:
+#  type: BLAST_FURNACE
+#  input: "synth:raw_ruby"
+#  result: "synth:ruby_ingot"
+#  amount: 1
+#  cooking-time: 100 # 5 seconds
+#  experience: 1.0
+
+# Example 3: Smoker fast food cooking
+#cook_golden_steak:
+#  type: SMOKER
+#  input: "BEEF"
+#  result: "COOKED_BEEF"
+#  amount: 1
+#  cooking-time: 100
+#  experience: 0.5
+
+# Example 4: Campfire slow roast
+#campfire_marshmallow:
+#  type: CAMPFIRE
+#  input: "SUGAR"
+#  result: "COOKIE"
+#  amount: 1
+#  cooking-time: 600 # 30 seconds
+#  experience: 0.2
+

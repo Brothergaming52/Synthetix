@@ -1,0 +1,50 @@
+# ==============================================================================
+#                 SYNTHETIX DISTRIBUTION CONFIGURATION - MOB DROPS
+# ==============================================================================
+# Configures custom items dropped when mobs die.
+#
+# SETTINGS PER DROP:
+# - item: Synthetix item ID ("synth:ruby") or vanilla material ("DIAMOND")
+# - entity: Specific entity type ("WITHER_SKELETON", "ZOMBIE"), or "ALL_HOSTILE", "ALL_PASSIVE", "ANY"
+# - chance: Drop chance from 0.0 (0%) to 1.0 (100%)
+# - looting-bonus: Additional chance per Looting enchantment level (e.g. 0.03 = +3% per level)
+# - min-amount: Minimum item stack amount dropped
+# - max-amount: Maximum item stack amount dropped
+# - player-kill-only: Whether mob must be killed by a player (prevents AFK mob farm exploits)
+# - biomes: Optional list of biome names where this drop applies (empty = all biomes)
+# - worlds: Optional list of world names where this drop applies (empty = all worlds)
+# ==============================================================================
+
+drops:
+  # Example 1: Wither Skeletons have a 15% chance (+3% per Looting) to drop a Ruby
+  wither_skeleton_ruby:
+    item: "synth:ruby"
+    entity: "WITHER_SKELETON"
+    chance: 0.15
+    looting-bonus: 0.03
+    min-amount: 1
+    max-amount: 2
+    player-kill-only: true
+    biomes: []
+    worlds: []
+
+  # Example 2: Ender Dragon guaranteed drop
+  dragon_heart_drop:
+    item: "synth:dragon_core"
+    entity: "ENDER_DRAGON"
+    chance: 1.0
+    looting-bonus: 0.0
+    min-amount: 1
+    max-amount: 1
+    player-kill-only: true
+
+  # Example 3: Rare bonus fragment from all hostile monsters at night
+  hostile_fragment_bonus:
+    item: "synth:ruby_fragment"
+    entity: "ALL_HOSTILE"
+    chance: 0.05
+    looting-bonus: 0.01
+    min-amount: 1
+    max-amount: 3
+    player-kill-only: true
+

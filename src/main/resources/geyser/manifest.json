@@ -1,0 +1,31 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Synthetix Bedrock Pack",
+    "description": "Auto-generated Bedrock resource pack for Synthetix",
+    "uuid": "83c332ee-5b0b-4d68-ba39-8214460f13d4",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      20,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "description": "Synthetix Bedrock Pack",
+      "type": "resources",
+      "uuid": "94d443ff-6c1c-4e79-cb4a-9325571a24e5",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,20 @@
+# ==============================================================================
+#                 SYNTHETIX RECIPE CONFIGURATION - ANVIL
+# ==============================================================================
+# Allows combining two items in an anvil with a custom experience level cost.
+# - left: Base item placed in left anvil slot
+# - right: Catalyst / repair item placed in right anvil slot
+# - cost: Experience level cost required to combine
+# - preserve-name: Preserves any custom rename on the left item
+# ==============================================================================
+
+# Example: Upgrading a Ruby Sword with a Netherite Ingot in the Anvil
+#reinforce_ruby_sword:
+#  type: ANVIL
+#  left: "synth:ruby_sword"
+#  right: "NETHERITE_INGOT"
+#  result: "synth:reinforced_ruby_sword"
+#  amount: 1
+#  cost: 5
+#  preserve-name: true
+

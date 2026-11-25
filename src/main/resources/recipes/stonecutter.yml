@@ -1,0 +1,15 @@
+# ==============================================================================
+#                 SYNTHETIX RECIPE CONFIGURATION - STONECUTTER
+# ==============================================================================
+# Allows cutting single blocks/items into decorative variants or fragments.
+# - input: Source material or custom item
+# - result: Cut material or custom item
+# ==============================================================================
+
+# Example: Cutting a Ruby Block into 9 Ruby Bricks
+#cut_ruby_bricks:
+#  type: STONECUTTER
+#  input: "synth:ruby_block"
+#  result: "synth:ruby_bricks"
+#  amount: 4
+

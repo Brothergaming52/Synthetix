@@ -1,0 +1,14 @@
+target/
+*.jar
+.idea/
+*.iml
+.vscode/
+compile.bat
+dependency-reduced-pom.xml
+PLUGIN_PAGE.md
+pom.xml
+.settings/
+.classpath
+.project
+Plugin-page-bbcode.txt
+assets/

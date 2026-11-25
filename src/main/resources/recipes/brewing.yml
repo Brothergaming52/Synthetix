@@ -1,0 +1,17 @@
+# ==============================================================================
+#                 SYNTHETIX RECIPE CONFIGURATION - BREWING STAND
+# ==============================================================================
+# Allows brewing custom potions and items using a Brewing Stand.
+# - ingredient: Reagent item placed in top slot (e.g. BLAZE_POWDER, custom item)
+# - base: Bottle or item placed in the 3 bottom slots (e.g. POTION, WATER_BOTTLE)
+# - result: Resulting item or custom potion
+# ==============================================================================
+
+# Example: Brewing Ruby Dust into a Water Bottle produces an Elixir of Strength
+#brew_ruby_elixir:
+#  type: BREWING
+#  ingredient: "synth:ruby_dust"
+#  base: "POTION"
+#  result: "synth:ruby_elixir"
+#  amount: 1
+

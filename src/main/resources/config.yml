@@ -1,0 +1,122 @@
+# ==============================================================================
+#                       SYNTHETIX (synth) - CORE ENGINE CONFIG
+# ==============================================================================
+# Compatibility: Paper 1.20.6 through Paper 26.3+ (Java 21)
+
+# Active language file stored in plugins/Synthetix/lang/<language>.yml
+language: 'en_US'
+
+debug:
+  enabled: false
+  log-item-operations: false
+  log-storage-queries: false
+  log-pack-requests: false
+
+# Storage Engine Configuration
+# Supported types: 'yaml' (flatfile), 'sqlite', 'mysql', 'mongodb'
+storage:
+  type: 'sqlite'
+  auto-save-interval-seconds: 300
+  sqlite:
+    file: 'synthetix_data.db'
+  mysql:
+    host: 'localhost'
+    port: 3306
+    database: 'synthetix'
+    username: 'root'
+    password: ''
+    maximum-pool-size: 10
+    minimum-idle: 2
+    connection-timeout-ms: 30000
+  mongodb:
+    uri: 'mongodb://localhost:27017'
+    database: 'synthetix'
+
+# ==============================================================================
+#                 RESOURCE PACK PIPELINE & HOSTING CONFIGURATION
+# ==============================================================================
+# Hosting modes:
+#   'auto'    - Automatically detects installed pack plugins (Nexo, ItemsAdder, Oraxen,
+#               RSPM, CraftEngine) and delegates to them. If none found, falls back to 'self'.
+#   'self'    - Built-in lightweight HTTP server serving the compiled pack.
+#   'link'    - External web URL host (e.g. Dropbox, Google Drive, self-hosted CDN).
+#   'plugin'  - Strictly delegates to an external pack manager plugin.
+#   'none'    - Generates and compiles pack to disk only; does not host or prompt.
+resource-pack:
+  enabled: true
+  hosting-mode: 'auto'
+  prompt-on-join: true
+  force-pack: false
+  prompt-message: '<gradient:#FF5555:#FFAA00>Please accept the server resource pack for the full visual experience!</gradient>'
+
+  # Built-in HTTP Self-Hosting Server
+  server:
+    port: 8085 # Secondary HTTP port (must be open on your firewall / port-forwarded)
+    bind-address: '0.0.0.0' # Local network bind address
+    external-ip: 'auto' # Set to 'auto' to automatically detect public server IP, or enter IP/domain manually
+
+  # Link Mode Configuration (used when hosting-mode: 'link')
+  link:
+    url: '' # Direct public download URL (e.g. 'https://cdn.example.com/synthetix-pack.zip')
+    sha1-hash: '' # Optional 40-character SHA-1 hex hash (calculated automatically if blank and pack exists)
+
+  # External Pack Combiner & Namespace Handling
+  combine-external-rp: true # Combines all .zip packs in plugins/Synthetix/external-resource-packs/
+  allow-minecraft-namespace: true # Allows plugins and external packs to merge into the 'minecraft' namespace
+  allow-namespace-conflicts: true # Allows multiple plugins to share or merge non-minecraft namespaces safely
+
+# Modular External Engine Bridges
+# Automatically detects and hooks into external custom item engines
+bridges:
+  auto-detect: true
+  nexo: true
+  oraxen: true
+  itemsadder: true
+  craftengine: true
+
+# Custom Block Engine Settings
+custom-blocks:
+  # Controls default brightness for custom block display entities placed inside physical proxy blocks.
+  # Options:
+  #   'ambient' - Samples real ambient light (block light + sky light) from adjacent non-occluding faces.
+  #   0 to 15   - Fixed light level override.
+  default-brightness: 'ambient'
+  # Minimum ambient light level applied to avoid pitch-black display entities when placed inside solid proxy blocks.
+  minimum-ambient-light: 3
+
+  # High-performance client-side occlusion culling & view frustum render limits
+  culling:
+    enabled: true
+    # Hard limit of simultaneously rendered custom blocks per client (prioritizes crosshairs/closest)
+    max-rendered-per-player: 50
+    # Search radius (in blocks) around player to evaluate custom blocks
+    max-distance: 48
+    # Immediate radius around player where blocks are always kept rendered (5 blocks ahead/behind/left/right/up/down)
+    near-radius: 5.5
+    # Tick interval between culling checks (4 ticks = 5 checks per second, imperceptible to human eye)
+    check-interval-ticks: 4
+    # Frustum priority weight (higher values strongly favor blocks in front of player's gaze)
+    fov-priority-weight: 100.0
+    # Distance penalty weight (closer blocks get higher priority)
+    distance-weight: 1.5
+
+  # High-performance continuous animation and network packet optimization settings
+  animations:
+    # Use interpolated keyframing: sends rotation steps safely under 45° so SLERP never reverses under packet loss
+    keyframe-optimization: true
+    # Duration (in ticks) for client hardware interpolation (default 8 ticks = 0.4 second)
+    interpolation-duration-ticks: 8
+    # Dispatch interval (in ticks) between keyframes to ensure seamless continuous rotation (default 6 ticks = 0.3s)
+    keyframe-dispatch-interval: 6
+    # Completely pause/halt packet transmission for stopped, idle (speed 0), or non-moving blocks
+    idle-zero-packets: true
+
+# ==============================================================================
+#                 BEDROCK / GEYSER / FLOODGATE COMPATIBILITY
+# ==============================================================================
+geyser:
+  enabled: true
+  # Intercepts Anvil clicks for Bedrock players and opens an optimized 3-row Chest GUI
+  custom-anvil-gui: true
+  # Intercepts Smithing Table clicks for Bedrock players and opens an optimized 3-row Chest GUI
+  custom-smithing-gui: true

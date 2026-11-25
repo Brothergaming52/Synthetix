@@ -1,0 +1,113 @@
+{
+  "format_version": "1",
+  "items": {
+    "minecraft:paper": [
+      {
+        "name": "synthetix_smithing_template_slot",
+        "allow_offhand": true,
+        "icon": "synthetix_smithing_template_slot",
+        "custom_model_data": 10030
+      },
+      {
+        "name": "synthetix_chestplate_slot",
+        "allow_offhand": true,
+        "icon": "synthetix_chestplate_slot",
+        "custom_model_data": 10031
+      },
+      {
+        "name": "synthetix_ingot_slot",
+        "allow_offhand": true,
+        "icon": "synthetix_ingot_slot",
+        "custom_model_data": 10032
+      },
+      {
+        "name": "synthetix_arrow_icon",
+        "allow_offhand": true,
+        "icon": "synthetix_arrow_icon",
+        "custom_model_data": 10033
+      },
+      {
+        "name": "synthetix_error_icon",
+        "allow_offhand": true,
+        "icon": "synthetix_error_icon",
+        "custom_model_data": 10034
+      },
+      {
+        "name": "synthetix_plus_icon",
+        "allow_offhand": true,
+        "icon": "synthetix_plus_icon",
+        "custom_model_data": 10035
+      },
+      {
+        "name": "synthetix_destroy_stage_0",
+        "allow_offhand": true,
+        "icon": "synthetix_destroy_stage_0",
+        "custom_model_data": 19000,
+        "armor_type": "helmet"
+      },
+      {
+        "name": "synthetix_destroy_stage_1",
+        "allow_offhand": true,
+        "icon": "synthetix_destroy_stage_1",
+        "custom_model_data": 19001,
+        "armor_type": "helmet"
+      },
+      {
+        "name": "synthetix_destroy_stage_2",
+        "allow_offhand": true,
+        "icon": "synthetix_destroy_stage_2",
+        "custom_model_data": 19002,
+        "armor_type": "helmet"
+      },
+      {
+        "name": "synthetix_destroy_stage_3",
+        "allow_offhand": true,
+        "icon": "synthetix_destroy_stage_3",
+        "custom_model_data": 19003,
+        "armor_type": "helmet"
+      },
+      {
+        "name": "synthetix_destroy_stage_4",
+        "allow_offhand": true,
+        "icon": "synthetix_destroy_stage_4",
+        "custom_model_data": 19004,
+        "armor_type": "helmet"
+      },
+      {
+        "name": "synthetix_destroy_stage_5",
+        "allow_offhand": true,
+        "icon": "synthetix_destroy_stage_5",
+        "custom_model_data": 19005,
+        "armor_type": "helmet"
+      },
+      {
+        "name": "synthetix_destroy_stage_6",
+        "allow_offhand": true,
+        "icon": "synthetix_destroy_stage_6",
+        "custom_model_data": 19006,
+        "armor_type": "helmet"
+      },
+      {
+        "name": "synthetix_destroy_stage_7",
+        "allow_offhand": true,
+        "icon": "synthetix_destroy_stage_7",
+        "custom_model_data": 19007,
+        "armor_type": "helmet"
+      },
+      {
+        "name": "synthetix_destroy_stage_8",
+        "allow_offhand": true,
+        "icon": "synthetix_destroy_stage_8",
+        "custom_model_data": 19008,
+        "armor_type": "helmet"
+      },
+      {
+        "name": "synthetix_destroy_stage_9",
+        "allow_offhand": true,
+        "icon": "synthetix_destroy_stage_9",
+        "custom_model_data": 19009,
+        "armor_type": "helmet"
+      }
+    ]
+  }
+}
